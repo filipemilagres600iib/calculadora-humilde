@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<style>
+
+h1 {
+    font-family: Arial;
+    padding-bottom: 50px;
+}
+
+button {
+    height: 60px;
+    width: 60px;
+    font-size: 25px;
+    border-radius: 10px;
+    }
+
+button:hover {
+    background-color: rgb(214, 214, 214);
+    transition: .3s;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: rgb(177, 177, 177)
+}
+
+.calculadora2 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(185, 185, 185);
+    height: 410px;
+    width: 300px;
+    border-radius: 10px;
+}
+.calculadora {
+    display: grid;
+    grid-template-columns: repeat(4, 60px);
+}
+
+#display {
+    grid-column: span 4;
+    height: 40px;
+    font-size: 25px;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.ponto {
+    font-size: 50px;
+    grid-column: 3;
+}
+.bt-icon {
+    height: 35px;
+    width: 35px;
+}
+.btn-icon {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    justify-content: center;
+    align-items: center;
+}
+
+.zero {
+    width: 120px;
+}
+
+.operador {
+    color: rgb(255, 148, 7)
+}
+
+.igual {
+    background-color: rgb(255, 148, 7);
+    color: white;
+}
+
+.igual:hover {
+    background-color: rgb(233, 132, 0);
+}
+
+.igual:active {
+    background-color: rgb(214, 121, 0)
+}
+
+.btn-ac {
+    color: rgb(255, 148, 7);
+}
+
+.btn-percent {
+    color: rgb(255, 148, 7);
+}
+
+
+</style>
+
+<body>
+
+    <h1>Calculadora umilde (max.: 17 dígitos)</h1>
+
+    <div class="calculadora2">
+    <div class="calculadora">
+    <input type="text" id="display" value="0" readonly>
+
+    <button class="btn-ac" onclick="btnApagarTudo()">AC</button>
+    <button onclick="btnApagar()" class="btn-icon"><img src="excluir.png" class="bt-icon"></button>
+    <button class="percent-btn" onclick="adicionar('%')">%</button>
+    <button class="operador" onclick="adicionar('÷')">÷</button>
+
+    <button onclick="adicionar('7')">7</button>
+    <button onclick="adicionar('8')">8</button>
+    <button onclick="adicionar('9')">9</button>
+    <button class="operador" onclick="adicionar('×')">×</button>
+
+    <button onclick="adicionar('4')">4</button>
+    <button onclick="adicionar('5')">5</button>
+    <button onclick="adicionar('6')">6</button>
+    <button class="operador" onclick="adicionar('-')">-</button>
+
+    <button onclick="adicionar('1')">1</button>
+    <button onclick="adicionar('2')">2</button>
+    <button onclick="adicionar('3')">3</button>
+    <button class="operador" onclick="adicionar('+')">+</button>
+
+    <button class="zero" onclick="adicionar('0')">0</button>
+    <button class="ponto" onclick="adicionar('.')">.</button>
+    <button class="igual" onclick="btnIgual()">=</button>
+</div>
+</div>
+    
+<script src="app.js"></script></body>
+</html>
