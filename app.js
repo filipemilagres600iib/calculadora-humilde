@@ -1,5 +1,6 @@
 let display = document.getElementById("display");
 
+
 function adicionar(valor) {
 
     if (display.value.length >= 17) {
